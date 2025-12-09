@@ -18,7 +18,7 @@
   <meta property="twitter:title" content="{% if title %}{{ title }} | {% endif %}{{ site.name }}">
   <meta property="twitter:description" content="{{ description or site.description }}">
   
-  <link rel="stylesheet" href="/css/main.min.css">
+  <link rel="stylesheet" href="{{ baseurl }}/css/main.min.css">
   {% if stylesheet %}<link rel="stylesheet" href="{{ stylesheet }}">{% endif %}
 </head>
 <body class="min-h-screen flex flex-col">

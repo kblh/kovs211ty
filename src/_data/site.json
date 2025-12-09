@@ -3,6 +3,7 @@
   "title": "Komorní orchestr",
   "description": "Oficiální web komorního orchestru",
   "url": "https://komorni-orchestr.cz",
+  "baseurl": "/kovs211ty",
   "author": "Komorní orchestr"
 }
 

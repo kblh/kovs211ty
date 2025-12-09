@@ -1,4 +1,10 @@
 const markdownIt = require('markdown-it');
+const siteData = require('./src/_data/site.json');
+
+// Use baseurl only in production (GitHub Pages)
+// In development, baseurl should be empty for localhost
+const isProduction = process.env.ELEVENTY_ENV === 'production' || process.env.CI === 'true';
+const baseurl = isProduction ? (siteData.baseurl || '') : '';
 
 module.exports = function(eleventyConfig) {
   // Input a output directories
@@ -57,7 +63,11 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.setLibrary("md", md);
 
+  // Add computed data for baseurl based on environment
+  eleventyConfig.addGlobalData("baseurl", baseurl);
+
   return {
+    pathPrefix: baseurl || "",
     dir: {
       input: "src",
       output: "_site",

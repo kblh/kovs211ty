@@ -11,7 +11,7 @@
         <ul class="space-y-2">
           {% for item in navigation.items %}
           <li>
-            <a href="{{ item.url }}" class="text-gray-400 hover:text-white transition-colors">
+            <a href="{{ baseurl }}{{ item.url }}" class="text-gray-400 hover:text-white transition-colors">
               {{ item.title }}
             </a>
           </li>
@@ -22,7 +22,7 @@
       <div>
         <h4 class="text-lg font-semibold mb-4">Kontakt</h4>
         <p class="text-gray-400">
-          <a href="/kontakt" class="hover:text-white transition-colors">Kontaktní informace</a>
+          <a href="{{ baseurl }}/kontakt" class="hover:text-white transition-colors">Kontaktní informace</a>
         </p>
       </div>
     </div>
