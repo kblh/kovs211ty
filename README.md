@@ -75,6 +75,48 @@ description: Popis stránky pro SEO
 Obsah stránky...
 ```
 
+## Deployment
+
+Projekt je připraven pro nasazení na GitHub Pages nebo Netlify.
+
+### GitHub Pages
+
+1. **Povolte GitHub Pages v nastavení repozitáře:**
+   - Přejděte do Settings → Pages
+   - V sekci "Source" vyberte "GitHub Actions"
+
+2. **Workflow se automaticky spustí:**
+   - Při push do `main` nebo `master` větve
+   - Nebo manuálně přes Actions → "Deploy to GitHub Pages" → "Run workflow"
+
+3. **Web bude dostupný na:**
+   - `https://[username].github.io/[repository-name]`
+   - Nebo na vlastní doméně (nastavení v Settings → Pages)
+
+### Netlify
+
+1. **Připojte repozitář k Netlify:**
+   - Přihlaste se na [Netlify](https://www.netlify.com/)
+   - Klikněte na "Add new site" → "Import an existing project"
+   - Připojte GitHub repozitář
+
+2. **Nastavení build:**
+   - Build command: `npm run build`
+   - Publish directory: `_site`
+   - (Tyto hodnoty jsou již nastavené v `netlify.toml`)
+
+3. **Deploy:**
+   - Netlify automaticky nasadí při každém push do hlavní větve
+   - Preview deployy se vytvoří pro každý pull request
+
+### Vercel (alternativa)
+
+Pro nasazení na Vercel:
+
+1. Nainstalujte Vercel CLI: `npm i -g vercel`
+2. Spusťte: `vercel`
+3. Nebo připojte repozitář přes Vercel dashboard
+
 ## Technologie
 
 - **11ty (Eleventy)** - Statický generátor webu

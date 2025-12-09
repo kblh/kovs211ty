@@ -46,7 +46,7 @@
 
 - [x] Nastavit produkční build IMPLEMENTED: Build proces funguje, vytváří \_site/ adresář s kompletním statickým webem
 - [x] Optimalizace assetů (CSS, JS, obrázky) IMPLEMENTED: CSS je minifikováno přes PostCSS, assety jsou kopírovány do \_site/
-- [ ] Nastavit deploy proces (GitHub Pages, Netlify, nebo jiný hosting)
+- [x] Nastavit deploy proces (GitHub Pages, Netlify, nebo jiný hosting) IMPLEMENTED: Vytvořen GitHub Actions workflow (.github/workflows/deploy.yml) pro automatické nasazení na GitHub Pages, vytvořen netlify.toml pro Netlify deployment, přidán \_site/ do .gitignore, aktualizován README s instrukcemi pro deployment
 
 ## Discovered During Work
 
