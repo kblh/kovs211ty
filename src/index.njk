@@ -1,0 +1,70 @@
+---
+layout: base.njk
+title: Úvod
+description: Vítejte na webu komorního orchestru
+---
+
+<div class="bg-gradient-to-br from-primary-50 to-primary-100 py-20">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h1 class="text-5xl md:text-6xl font-serif font-bold text-gray-900 mb-6">
+        {{ site.name }}
+      </h1>
+      <p class="text-xl text-gray-700 mb-8">
+        {{ site.description }}
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container mx-auto px-4 py-16">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+    <div>
+      <h2 class="text-3xl font-serif font-bold mb-4">Nadcházející koncerty</h2>
+      <p class="text-gray-700 mb-6">
+        Přijďte se podívat na naše nadcházející vystoupení. Těšíme se na vás!
+      </p>
+      <a href="/koncerty" class="btn btn-primary inline-block">
+        Zobrazit všechny koncerty
+      </a>
+    </div>
+    
+    <div>
+      <h2 class="text-3xl font-serif font-bold mb-4">O orchestru</h2>
+      <p class="text-gray-700 mb-6">
+        Poznejte náš orchestr, jeho historii a členy. Zjistěte více o tom, co děláme a proč.
+      </p>
+      <a href="/o-nas" class="btn btn-secondary inline-block">
+        Více o nás
+      </a>
+    </div>
+  </div>
+  
+  {% set upcomingConcerts = collections.concerts | sortByDate | limit(3) %}
+  {% if upcomingConcerts | length > 0 %}
+  <section class="mt-16">
+    <h2 class="text-3xl font-serif font-bold mb-8 text-center">Nejbližší koncerty</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {% for concert in upcomingConcerts %}
+      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+        <div class="p-6">
+          <div class="text-sm text-primary-600 font-semibold mb-2">
+            {{ concert.data.date | dateFormat }}
+          </div>
+          <h3 class="text-xl font-serif font-bold mb-2">
+            <a href="{{ concert.url }}" class="hover:text-primary-600 transition-colors">
+              {{ concert.data.title }}
+            </a>
+          </h3>
+          <p class="text-gray-600 mb-4">{{ concert.data.place }}</p>
+          <a href="{{ concert.url }}" class="text-primary-600 hover:text-primary-700 font-medium">
+            Více informací →
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</div>
+

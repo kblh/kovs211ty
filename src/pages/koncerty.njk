@@ -1,0 +1,65 @@
+---
+layout: base.njk
+title: Koncerty
+description: Seznam všech koncertů komorního orchestru
+permalink: /koncerty/
+---
+
+<div class="container mx-auto px-4 py-16">
+  <div class="max-w-6xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-serif font-bold mb-12 text-center">Koncerty</h1>
+    
+    {% set concerts = collections.concerts | sortByDate %}
+    {% if concerts | length > 0 %}
+    <div class="space-y-8">
+      {% for concert in concerts %}
+      <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+        <div class="p-8">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+            <div class="mb-4 md:mb-0">
+              <div class="text-sm text-primary-600 font-semibold mb-2">
+                {{ concert.data.date | dateFormat }}
+              </div>
+              <h2 class="text-2xl font-serif font-bold mb-2">
+                <a href="{{ concert.url }}" class="hover:text-primary-600 transition-colors">
+                  {{ concert.data.title }}
+                </a>
+              </h2>
+              <p class="text-gray-600">
+                <svg class="w-4 h-4 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                {{ concert.data.place }}
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <a href="{{ concert.url }}" class="btn btn-primary text-center">
+                Více informací
+              </a>
+              {% if concert.data.invitation %}
+              <a href="{{ concert.data.invitation }}" target="_blank" class="btn btn-secondary text-center">
+                Pozvánka (PDF)
+              </a>
+              {% endif %}
+            </div>
+          </div>
+          
+          {% if concert.data.description %}
+          <div class="prose max-w-none mt-4">
+            {{ concert.data.description | markdown | safe }}
+          </div>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="text-center py-16">
+      <p class="text-xl text-gray-600 mb-4">Momentálně nemáme naplánované žádné koncerty.</p>
+      <p class="text-gray-600">Sledujte nás pro aktualizace o nadcházejících vystoupeních.</p>
+    </div>
+    {% endif %}
+  </div>
+</div>
+

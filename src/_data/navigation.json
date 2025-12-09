@@ -1,0 +1,21 @@
+{
+  "items": [
+    {
+      "title": "Úvod",
+      "url": "/"
+    },
+    {
+      "title": "O nás",
+      "url": "/o-nas"
+    },
+    {
+      "title": "Koncerty",
+      "url": "/koncerty"
+    },
+    {
+      "title": "Kontakt",
+      "url": "/kontakt"
+    }
+  ]
+}
+

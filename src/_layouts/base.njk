@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:title" content="{% if title %}{{ title }} | {% endif %}{{ site.name }}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="twitter:title" content="{% if title %}{{ title }} | {% endif %}{{ site.name }}">
+  <meta property="twitter:description" content="{{ description or site.description }}">
+  
+  <link rel="stylesheet" href="/css/main.min.css">
+  {% if stylesheet %}<link rel="stylesheet" href="{{ stylesheet }}">{% endif %}
+</head>
+<body class="min-h-screen flex flex-col">
+  {% include "header.njk" %}
+  
+  <main class="flex-grow">
+    {{ content | safe }}
+  </main>
+  
+  {% include "footer.njk" %}
+  
+  {% if script %}<script src="{{ script }}"></script>{% endif %}
+</body>
+</html>
+

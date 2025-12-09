@@ -1,0 +1,40 @@
+---
+layout: base.njk
+---
+
+<div class="container mx-auto px-4 py-16">
+  <div class="max-w-4xl mx-auto">
+    <a href="/koncerty" class="text-primary-600 hover:text-primary-700 mb-6 inline-block">
+      ← Zpět na seznam koncertů
+    </a>
+    
+    <article class="bg-white rounded-lg shadow-md p-8 md:p-12">
+      <div class="mb-6">
+        <div class="text-sm text-primary-600 font-semibold mb-2">
+          {{ date | dateFormat }}
+        </div>
+        <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4">{{ title }}</h1>
+        <p class="text-xl text-gray-600">
+          <svg class="w-5 h-5 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+          {{ place }}
+        </p>
+      </div>
+      
+      {% if invitation %}
+      <div class="mb-8">
+        <a href="{{ invitation }}" target="_blank" class="btn btn-primary inline-block">
+          Stáhnout pozvánku (PDF)
+        </a>
+      </div>
+      {% endif %}
+      
+      <div class="prose prose-lg max-w-none">
+        {{ content | safe }}
+      </div>
+    </article>
+  </div>
+</div>
+

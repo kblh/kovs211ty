@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koncerty | Komorní orchestr</title>
+  <meta name="description" content="Seznam všech koncertů komorního orchestru">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://komorni-orchestr.cz/pages/koncerty/">
+  <meta property="og:title" content="Koncerty | Komorní orchestr">
+  <meta property="og:description" content="Seznam všech koncertů komorního orchestru">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://komorni-orchestr.cz/pages/koncerty/">
+  <meta property="twitter:title" content="Koncerty | Komorní orchestr">
+  <meta property="twitter:description" content="Seznam všech koncertů komorního orchestru">
+  
+  <link rel="stylesheet" href="/css/main.min.css">
+  
+</head>
+<body class="min-h-screen flex flex-col">
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+  <nav class="container mx-auto px-4 py-4">
+    <div class="flex items-center justify-between">
+      <a href="/" class="text-2xl font-serif font-bold text-primary-700 hover:text-primary-800 transition-colors">
+        Komorní orchestr
+      </a>
+      
+      <ul class="hidden md:flex space-x-8">
+        
+        <li>
+          <a href="/" 
+             class="text-gray-700 hover:text-primary-600 transition-colors font-medium ">
+            Úvod
+          </a>
+        </li>
+        
+        <li>
+          <a href="/o-nas" 
+             class="text-gray-700 hover:text-primary-600 transition-colors font-medium ">
+            O nás
+          </a>
+        </li>
+        
+        <li>
+          <a href="/koncerty" 
+             class="text-gray-700 hover:text-primary-600 transition-colors font-medium ">
+            Koncerty
+          </a>
+        </li>
+        
+        <li>
+          <a href="/kontakt" 
+             class="text-gray-700 hover:text-primary-600 transition-colors font-medium ">
+            Kontakt
+          </a>
+        </li>
+        
+      </ul>
+      
+      <!-- Mobile menu button -->
+      <button class="md:hidden text-gray-700 hover:text-primary-600" id="mobile-menu-button" aria-label="Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile menu -->
+    <div class="hidden md:hidden mt-4" id="mobile-menu">
+      <ul class="space-y-4">
+        
+        <li>
+          <a href="/" 
+             class="block text-gray-700 hover:text-primary-600 transition-colors font-medium ">
+            Úvod
+          </a>
+        </li>
+        
+        <li>
+          <a href="/o-nas" 
+             class="block text-gray-700 hover:text-primary-600 transition-colors font-medium ">
+            O nás
+          </a>
+        </li>
+        
+        <li>
+          <a href="/koncerty" 
+             class="block text-gray-700 hover:text-primary-600 transition-colors font-medium ">
+            Koncerty
+          </a>
+        </li>
+        
+        <li>
+          <a href="/kontakt" 
+             class="block text-gray-700 hover:text-primary-600 transition-colors font-medium ">
+            Kontakt
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<script>
+  document.getElementById('mobile-menu-button')?.addEventListener('click', function() {
+    const menu = document.getElementById('mobile-menu');
+    menu?.classList.toggle('hidden');
+  });
+</script>
+
+
+  
+  <main class="flex-grow">
+    
+<div class="container mx-auto px-4 py-16">
+  <div class="max-w-6xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-serif font-bold mb-12 text-center">Koncerty</h1>
+    
+    
+    
+    <div class="space-y-8">
+      
+      <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+        <div class="p-8">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+            <div class="mb-4 md:mb-0">
+              <div class="text-sm text-primary-600 font-semibold mb-2">
+                15. prosince 2024
+              </div>
+              <h2 class="text-2xl font-serif font-bold mb-2">
+                <a href="/concerts/2024-12-15-vanocni-koncert/" class="hover:text-primary-600 transition-colors">
+                  Vánoční koncert
+                </a>
+              </h2>
+              <p class="text-gray-600">
+                <svg class="w-4 h-4 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                Kostel sv. Jakuba, Praha
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <a href="/concerts/2024-12-15-vanocni-koncert/" class="btn btn-primary text-center">
+                Více informací
+              </a>
+              
+              <a href="/pdf/vanocni-koncert-2024.pdf" target="_blank" class="btn btn-secondary text-center">
+                Pozvánka (PDF)
+              </a>
+              
+            </div>
+          </div>
+          
+          
+          <div class="prose max-w-none mt-4">
+            <p>Přijďte si užít vánoční atmosféru s naším komorním orchestrem.<br>
+Zazní tradiční vánoční koledy i klasické skladby v komorním provedení.</p>
+
+          </div>
+          
+        </div>
+      </article>
+      
+      <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+        <div class="p-8">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+            <div class="mb-4 md:mb-0">
+              <div class="text-sm text-primary-600 font-semibold mb-2">
+                20. ledna 2025
+              </div>
+              <h2 class="text-2xl font-serif font-bold mb-2">
+                <a href="/concerts/2025-01-20-novy-rok/" class="hover:text-primary-600 transition-colors">
+                  Novoroční koncert
+                </a>
+              </h2>
+              <p class="text-gray-600">
+                <svg class="w-4 h-4 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                Městské divadlo, Brno
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <a href="/concerts/2025-01-20-novy-rok/" class="btn btn-primary text-center">
+                Více informací
+              </a>
+              
+              <a href="/pdf/novorocni-koncert-2025.pdf" target="_blank" class="btn btn-secondary text-center">
+                Pozvánka (PDF)
+              </a>
+              
+            </div>
+          </div>
+          
+          
+          <div class="prose max-w-none mt-4">
+            <p>Začněte nový rok s krásnou hudbou. Novoroční koncert s výběrem<br>
+nejkrásnějších skladeb z klasického repertoáru.</p>
+
+          </div>
+          
+        </div>
+      </article>
+      
+    </div>
+    
+  </div>
+</div>
+
+
+  </main>
+  
+  <footer class="bg-gray-900 text-white mt-auto">
+  <div class="container mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-xl font-serif font-bold mb-4">Komorní orchestr</h3>
+        <p class="text-gray-400">Oficiální web komorního orchestru</p>
+      </div>
+      
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Navigace</h4>
+        <ul class="space-y-2">
+          
+          <li>
+            <a href="/" class="text-gray-400 hover:text-white transition-colors">
+              Úvod
+            </a>
+          </li>
+          
+          <li>
+            <a href="/o-nas" class="text-gray-400 hover:text-white transition-colors">
+              O nás
+            </a>
+          </li>
+          
+          <li>
+            <a href="/koncerty" class="text-gray-400 hover:text-white transition-colors">
+              Koncerty
+            </a>
+          </li>
+          
+          <li>
+            <a href="/kontakt" class="text-gray-400 hover:text-white transition-colors">
+              Kontakt
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Kontakt</h4>
+        <p class="text-gray-400">
+          <a href="/kontakt" class="hover:text-white transition-colors">Kontaktní informace</a>
+        </p>
+      </div>
+    </div>
+    
+    <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+      <p>&copy; 2025 Komorní orchestr. Všechna práva vyhrazena.</p>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+</body>
+</html>
+

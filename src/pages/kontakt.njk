@@ -1,0 +1,74 @@
+---
+layout: base.njk
+title: Kontakt
+description: Kontaktní informace komorního orchestru
+permalink: /kontakt/
+---
+
+<div class="container mx-auto px-4 py-16">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-serif font-bold mb-8">Kontakt</h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-2xl font-serif font-bold mb-6">Kontaktní informace</h2>
+        <div class="space-y-4 text-gray-700">
+          <div>
+            <h3 class="font-semibold mb-2">Email</h3>
+            <p>
+              <a href="mailto:info@komorni-orchestr.cz" class="text-primary-600 hover:text-primary-700">
+                info@komorni-orchestr.cz
+              </a>
+            </p>
+          </div>
+          
+          <div>
+            <h3 class="font-semibold mb-2">Telefon</h3>
+            <p>
+              <a href="tel:+420123456789" class="text-primary-600 hover:text-primary-700">
+                +420 123 456 789
+              </a>
+            </p>
+          </div>
+          
+          <div>
+            <h3 class="font-semibold mb-2">Adresa</h3>
+            <p>
+              Komorní orchestr<br>
+              Ulice 123<br>
+              123 45 Město
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <h2 class="text-2xl font-serif font-bold mb-6">Napište nám</h2>
+        <form class="space-y-4">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Jméno</label>
+            <input type="text" id="name" name="name" 
+                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+          </div>
+          
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+            <input type="email" id="email" name="email" 
+                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+          </div>
+          
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Zpráva</label>
+            <textarea id="message" name="message" rows="5" 
+                      class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary">
+            Odeslat zprávu
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
